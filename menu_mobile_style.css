@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#nav{
+    height: 70px;
+    padding: 0px 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #535353;
+    color: #fff;
+}
+
+#menu-itens{
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    list-style: none;
+}
+
+li{
+    padding: 100% 10px;
+    width: 100%;
+    text-align: center;
+
+    transition: .6s;
+}
+
+li:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+
+
+#conjunto_btn-mobile{
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    #menu-itens{
+        visibility: hidden;
+
+        position: absolute;
+        top: 70px;
+        left: 0px;
+        
+        width: 100vw;
+        height: 0px;
+
+        flex-direction: column;
+        gap: 0px;
+
+        background-color: #535353;
+
+        transition: .3s;
+    }
+
+    #menu-itens.show{
+        visibility: visible;
+        height: calc(100vh - 70px);
+    }
+
+    li{
+        height: 10%;
+        padding: 0;
+    }
+
+    a{
+        position: relative;
+        top: 35%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #conjunto_btn-mobile{
+        display: block;
+    }
+
+    #btn-mobile{
+        border: none;
+        background-color: #535353;
+        font-size: 20px;
+        color: #fff;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    #hamburguer{
+        height: 35px;
+        background-color: transparent;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #span1, #span2, #span3{
+        display: block;
+        background-color: #fff;
+        width: 35px;
+        height: 2px;
+    }
+
+    #span1, #span3{
+        transition: .5s;
+    }
+
+    #hamburguer.active #span1{
+        transform: rotate(135deg);
+        position: relative;
+        top: 34.5%;
+
+        /*background-color: yellow;*/
+    }
+
+    #hamburguer.active #span2{
+        background-color: transparent;
+    } 
+
+    #hamburguer.active #span3{
+        transform: rotate(-135deg);
+        position: relative;
+        bottom: 34.5%;
+
+        /*background-color: green;*/
+    }
+}
